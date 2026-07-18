@@ -24,14 +24,13 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run Pytest
-        working-directory: backend
         env:
-          PYTHONPATH:
           DATABASE_URL: sqlite:///./test.db
           JWT_SECRET: test_jwt_secret_key_12345
           GEMINI_API_KEY: mock_key
         run: |
-          python -m pytest
+          cd backend
+          Pytest
 
   frontend-tests:
     runs-on: ubuntu-latest
