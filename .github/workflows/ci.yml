@@ -31,7 +31,8 @@ jobs:
           JWT_SECRET: test_jwt_secret_key_12345
           GEMINI_API_KEY: mock_key
         run: |
-          python -m pytest
+          python -m 
+          pytest
 
   frontend-tests:
     runs-on: ubuntu-latest
